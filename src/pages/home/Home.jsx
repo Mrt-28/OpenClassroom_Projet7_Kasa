@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import LogementCard from '../../components/LogementCard.jsx';
 import ScenicHeader from '../../components/ScenicHeader.jsx';
-import dataLogements from '../../data/logements.json';
+import dataLogements from '../../data/logements.json';//custom hook
 
 import '../../sass/home.scss'
 
