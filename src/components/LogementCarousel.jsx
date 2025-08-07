@@ -11,7 +11,6 @@ function LogementCarousel(props) {
     const pictures = props.pictures;
 
     function left(event) {
-        const picture = event.target.parentElement.querySelector('.logement-carousel__cover');
         if (pictureIndex > 0) {
             setPictureIndex(pictureIndex - 1);
         }
@@ -20,7 +19,6 @@ function LogementCarousel(props) {
         }
     }
     function right(event) {
-        const picture = event.target.parentElement.querySelector('.logement-carousel__cover');
         if (pictureIndex < pictures.length - 1) {
             setPictureIndex(pictureIndex + 1);
         }
