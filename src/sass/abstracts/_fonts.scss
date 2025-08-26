@@ -1,0 +1,12 @@
+@use "colors";
+
+@mixin font-montserrat($weight:400, $size:10px, $style: normal, $color: colors.$white) {
+    font-family: Montserrat;
+    font-weight: $weight;
+    font-style: $style;
+    font-size: $size;
+    color: $color;
+    line-height: 143%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}

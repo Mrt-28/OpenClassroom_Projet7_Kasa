@@ -1,0 +1,22 @@
+.scenic-header{
+    position: relative;
+    border-radius: 10px;
+    height: 17vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    &__cover{
+        width: 100%;
+        display: block;
+        filter: brightness(0.4);
+    }
+    &__texte{
+        position: absolute;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 100%;
+        width: 60%;
+        padding: 1.8vw;
+    }
+}

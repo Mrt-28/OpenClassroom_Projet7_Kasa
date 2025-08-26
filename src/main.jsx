@@ -6,12 +6,13 @@ import {
   Outlet,
 } from "react-router-dom";
 
+//import './sass/bases/_reset.scss';
 import './sass/main.scss';
 
-import NotFound from './pages/not_found/Not_found.jsx';
-import Home from './pages/home/Home.jsx';
-import Logement from './pages/logement/Logement.jsx';
-import A_propos from './pages/a_propos/A_propos.jsx';
+import NotFound from './pages/NotFound.jsx';
+import Home from './pages/Home.jsx';
+import Logement from './pages/Logement.jsx';
+import About from './pages/About.jsx';
 
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
     ),
     children: [
       { path: "/", element: <Home /> },
-      { path: "/a_propos", element: <A_propos /> },
+      { path: "/about", element: <About /> },
       { path: "/logement/:id", element: <Logement /> },   
       { path: "*", element: <NotFound /> },
     ],

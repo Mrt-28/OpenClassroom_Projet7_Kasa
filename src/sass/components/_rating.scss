@@ -1,0 +1,15 @@
+@use "../abstracts" as *;
+
+.rating{
+    &__stars{
+        display: flex;
+    }
+    &__star{
+        font-size: 24px;
+        color: $gray2;
+
+        &__filled{
+            color: $red;
+        }
+    }
+}

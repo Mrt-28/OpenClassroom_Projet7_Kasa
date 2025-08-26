@@ -1,4 +1,3 @@
-import '../sass/header.scss'
 
 function ScenicHeader(props) {
    return (

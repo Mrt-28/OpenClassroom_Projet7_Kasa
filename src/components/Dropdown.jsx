@@ -1,4 +1,3 @@
-import '../sass/dropdown.scss'
 import arrowDown from '../assets/arrow_down.svg'
 import arrowUp from '../assets/arrow_up.svg'
 

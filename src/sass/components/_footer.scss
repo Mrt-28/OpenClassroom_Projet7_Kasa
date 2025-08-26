@@ -1,0 +1,10 @@
+.footband{
+    background-color: black;
+
+    &__logo{
+        filter: brightness(1);
+    }
+    &__right{
+        color: white;
+    }
+}

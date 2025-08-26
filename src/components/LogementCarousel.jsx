@@ -3,8 +3,6 @@ import { useState } from 'react';
 import arrowLeft from '../assets/arrow_left.svg';
 import arrowRight from '../assets/arrow_right.svg';
 
-import '../sass/logement.scss';
-
 function LogementCarousel(props) {
 
     const [pictureIndex, setPictureIndex] = useState(0);
@@ -28,10 +26,10 @@ function LogementCarousel(props) {
     }
 
     return (
-        <div className="logement-carousel">
-            <img onClick={left} className="logement-carousel__left-arrow" src={arrowLeft} alt="Previous" />
-            <img className="logement-carousel__picture" src={pictures[pictureIndex]} alt={props.title} />
-            <img onClick={right} className="logement-carousel__right-arrow" src={arrowRight} alt="Next" />          
+        <div className="logement__carousel">
+            <img onClick={left} className="logement__carousel__left-arrow" src={arrowLeft} alt="Previous" />
+            <img className="logement__carousel__picture" src={pictures[pictureIndex]} alt={props.title} />
+            <img onClick={right} className="logement__carousel__right-arrow" src={arrowRight} alt="Next" />          
         </div>
     )
 }

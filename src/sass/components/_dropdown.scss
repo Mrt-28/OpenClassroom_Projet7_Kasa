@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+
+.dropdown{
+    border-radius: 5px;
+
+    &__header{
+        color: white;
+        background-color: #FF6060;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    &__content{
+        background-color: $gray1;
+        opacity: 0.45;
+        padding: 15px;
+        font-size: 12px;
+        border-radius: 5px;
+        color: $black;
+
+        &__hidden{
+            display: none;
+        }
+    }
+}
