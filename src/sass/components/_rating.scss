@@ -13,3 +13,12 @@
         }
     }
 }
+
+@media (min-width: 1240px) {
+    .rating{
+        &__star{
+            gap: 6px;
+            font-size: 38px;
+        }
+    }
+}

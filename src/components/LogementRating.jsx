@@ -1,6 +1,6 @@
 
 function LogementRating(props) {
-    const stars = Array(5).fill(0);
+    const stars = Array(5).fill(0)
 
     return (
         <div className='rating'>

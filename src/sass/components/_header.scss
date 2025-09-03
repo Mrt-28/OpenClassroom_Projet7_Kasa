@@ -1,20 +1,40 @@
+@use "../abstracts" as *;
+
 .headband{
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     &__logo{
-        color: antiquewhite;
+        width: 40%;
     }
     &__links{
         display: flex;
         gap: 26px;
-        font-size: 12px;
+        font-size: 4dvw;
+        font-weight: 500;
+
+        &__link{
+            text-decoration: none;
+            color: $black;
+            
+            &--active{
+                text-decoration: underline;
+                color: $black;
+            }
+        }
     }
 }
 
-.scenic-header{
-    &__cover{
-       width: 100%; 
-    } 
+@media (min-width: 1240px) {
+    .headband{
+        &__logo{
+            width: 15%;
+            min-width: 200px;
+        }
+        &__links{
+            gap: 40px;
+            font-size: 24px;
+        }
+    }
 }

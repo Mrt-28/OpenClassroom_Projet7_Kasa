@@ -1,14 +1,21 @@
-import Dropdown from '../components/Dropdown.jsx';
-import dataAbout from '../data/about.json';
+import Dropdown from '../components/Dropdown.jsx'
+import ScenicHeader from '../components/ScenicHeader.jsx'
+
+import dataAbout from '../data/about.json'
 
 function About() {
     return (
         <> 
-            {dataAbout.map((item)=>(
-                <Dropdown title={item.title} content={item.content} />
-            ))}
+            <ScenicHeader subClassName='scenic-header__cover--about' img='/img_backtitle2.jpg' txt={<></>} />
+
+            <div className='about'>
+                {dataAbout.map((item)=>(
+                    <Dropdown title={item.title} content={item.content} />
+                ))}                
+            </div>
+
         </>
     )
 }
 
-export default About;
+export default About

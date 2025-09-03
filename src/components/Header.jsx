@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
 
 import logoKasa from '../assets/logo_kasa.svg'
 
@@ -8,8 +7,8 @@ function Header() {
         <header className="headband">
             <img className='headband__logo' src={logoKasa} alt='logo kasa'/>
             <nav className='headband__links'>
-                <Link to='/'>Acceuil</Link>
-                <Link to='/about'>A propos</Link>
+                <NavLink className={({ isActive }) => (isActive ? 'headband__links__link--active' : 'headband__links__link')} to='/' end>Acceuil</NavLink>
+                <NavLink className={({ isActive }) => (isActive ? 'headband__links__link--active' : 'headband__links__link')} to='/about'>A propos</NavLink>
             </nav>
         </header>
     )
