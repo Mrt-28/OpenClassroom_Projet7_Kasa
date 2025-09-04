@@ -1,24 +1,24 @@
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
-.rating{
-    &__stars{
-        display: flex;
-    }
-    &__star{
-        font-size: 24px;
-        color: $gray2;
+.rating {
+	&__stars {
+		display: flex;
+	}
+	&__star {
+		font-size: 24px;
+		color: $gray2;
 
-        &__filled{
-            color: $red;
-        }
-    }
+		&__filled {
+			color: $red;
+		}
+	}
 }
 
-@media (min-width: 1240px) {
-    .rating{
-        &__star{
-            gap: 6px;
-            font-size: 38px;
-        }
-    }
+@media (min-width: $breakpoint1) {
+	.rating {
+		&__star {
+			gap: 6px;
+			font-size: 38px;
+		}
+	}
 }
