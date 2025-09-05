@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 import arrowLeft from '../assets/arrow_left.svg'
 import arrowRight from '../assets/arrow_right.svg'
@@ -6,10 +6,14 @@ import arrowRight from '../assets/arrow_right.svg'
 function LogementCarousel(props) {
 	const [pictureIndex, setPictureIndex] = useState(0)
 	const pictures = props.pictures
+	const pictureRef = useRef(null)
+	const isAnimatingRef = useRef(false)
 
 	async function timeFadeOut(callback) {
 		return new Promise((resolve) => {
-			const picture = document.querySelector('.logement__carousel__picture-container__picture')
+			const picture = pictureRef.current
+			if (!picture) return resolve()
+
 			picture.classList.add('fade-out')
 
 			setTimeout(() => {
@@ -24,7 +28,9 @@ function LogementCarousel(props) {
 	}
 
 	function timeFadein() {
-		var picture = document.querySelector('.logement__carousel__picture-container__picture')
+		const picture = pictureRef.current
+		if (!picture) return
+
 		picture.classList.add('fade-in')
 		setTimeout(() => {
 			picture.classList.remove('fade-in')
@@ -32,6 +38,9 @@ function LogementCarousel(props) {
 	}
 
 	async function left() {
+		if (isAnimatingRef.current) return
+		isAnimatingRef.current = true
+
 		const changeIndex = () => {
 			if (pictureIndex > 0) {
 				setPictureIndex(pictureIndex - 1)
@@ -42,9 +51,13 @@ function LogementCarousel(props) {
 
 		await timeFadeOut(changeIndex)
 		timeFadein()
+		isAnimatingRef.current = false
 	}
 
 	async function right() {
+		if (isAnimatingRef.current) return
+		isAnimatingRef.current = true
+
 		const changeIndex = () => {
 			if (pictureIndex < pictures.length - 1) {
 				setPictureIndex(pictureIndex + 1)
@@ -55,6 +68,7 @@ function LogementCarousel(props) {
 
 		await timeFadeOut(changeIndex)
 		timeFadein()
+		isAnimatingRef.current = false
 	}
 
 	return (
@@ -67,6 +81,7 @@ function LogementCarousel(props) {
 			/>
 			<div className="logement__carousel__picture-container">
 				<img
+					ref={pictureRef}
 					className="logement__carousel__picture-container__picture"
 					src={pictures[pictureIndex]}
 					alt={props.title}
