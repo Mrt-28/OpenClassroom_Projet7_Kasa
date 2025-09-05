@@ -103,6 +103,14 @@
 		flex-direction: column;
 	}
 }
+.fade-in {
+	opacity: 1;
+	transition: opacity 1s;
+}
+.fade-out {
+	opacity: 0;
+	transition: opacity 1s;
+}
 
 @media (min-width: $breakpoint1) {
 	.logement {
