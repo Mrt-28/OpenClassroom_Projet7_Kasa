@@ -87,6 +87,9 @@ function LogementCarousel(props) {
 					alt={props.title}
 				/>
 			</div>
+			<div className="logement__carousel__indicator">
+				{pictureIndex + 1}/{pictures.length}
+			</div>
 			<img
 				onClick={right}
 				className="logement__carousel__right-arrow"

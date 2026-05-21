@@ -42,6 +42,17 @@
 			width: 7dvw;
 			cursor: pointer;
 		}
+		&__indicator {
+			position: absolute;
+			bottom: 2dvw;
+			left: 50%;
+			transform: translateX(-50%);
+			color: $white;
+			padding: 6px 10px;
+			border-radius: 12px;
+			font-size: 1.5dvw;
+			z-index: 10;
+		}
 	}
 	&__desc {
 		display: flex;
